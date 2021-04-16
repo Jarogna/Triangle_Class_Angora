@@ -1,76 +1,78 @@
 //this program demonstrates a simple class
+//Student: Ronald Angora
+//Date: 04/16/21
 #include <iostream>
 using namespace std;
 
-//declaring the rectangle class. this will allow us to eventually make a whole bunch of different rectangles
-class Rectangle
+//declaring the triangle class. this will allow us to eventually make a whole bunch of different triangles
+class Triangle
 {
 	private:
-		double width;
-		double length;
+		double base;
+		double height;
 	public:
-		void setWidth(double);
-		void setLength(double);
-		double getWidth() const;
-		double getLength() const;
+		void setBase(double);
+		void setHeight(double);
+		double getBase() const;
+		double getHeight() const;
 		double getArea() const;
 };
-//a function that allows us to set the width of a given rectangle
-void Rectangle::setWidth(double w)
+//a function that allows us to set the width of a given triangle
+void Triangle::setBase(double b)
 {
-	width = w;
+	base = b;
 }
-//a function that allows us to set the length of a given rectangle
-void Rectangle::setLength(double len)
+//a function that allows us to set the length of a given triangle
+void Triangle::setHeight(double h)
 {
-	length = len;
+	height = h;
 }
-//a function that returns the width of a given rectangle
-double Rectangle::getWidth() const
+//a function that returns the width of a given triangle
+double Triangle::getBase() const
 {
-	return width;
+	return base;
 }
-//a function that returns the length of a given rectangle
-double Rectangle::getLength() const
+//a function that returns the length of a given triangle
+double Triangle::getHeight() const
 {
-	return length;
+	return height;
 }
-//a function that calculates and returns the area of a given rectangle
-double Rectangle::getArea() const
+//a function that calculates and returns the area of a given triangle
+double Triangle::getArea() const
 {
-	return width * length;
+	return height * base / 2;
 }
 
 int main()
 {
 	double number; //declare local variables for temporary storage of numbers
 	double totalArea;
-	Rectangle kitchen; //three different instances of the rectangles with different properties
-	Rectangle bedroom;
-	Rectangle den;
+	Triangle one; //three different instances of the triangles with different properties
+	Triangle two;
+	Triangle three;
 	
-	cout << "What is the Kitchen's length?\t"; //ask user for input about kitchen
+	cout << "What is the Triangle one's base?\t"; //ask user for input about triangle one
 	cin >> number;
-	kitchen.setLength(number); //set the length of kitchen
-	cout << "What is the Kitchen's width?\t"; //ask user for input about kitchen
+	one.setBase(number); //set the length of triangle one
+	cout << "What is the Triangle one's height?\t"; //ask user for input about triangle one
 	cin >> number;
-	kitchen.setWidth(number); //set the width of kitchen
+	one.setHeight(number); //set the width of triangle one
 	
-	cout << "What is the Bedroom's length?\t"; //ask user for input about bedroom
+	cout << "What is the Triangle two's length?\t"; //ask user for input about triangle two
 	cin >> number;
-	bedroom.setLength(number); //set the length of bedroom
-	cout << "What is the Bedroom's width?\t"; //ask user for input about bedroom
+	two.setBase(number); //set the length of triangle two
+	cout << "What is the Triangle two's width?\t"; //ask user for input about triangle two
 	cin >> number;
-	bedroom.setWidth(number); //set the width of bedroom
+	two.setHeight(number); //set the width of triangle two
 	
-	cout << "What is the Den's length?\t"; //ask user for input about den
+	cout << "What is the Den's length?\t"; //ask user for input about triangle three
 	cin >> number;
-	den.setLength(number); //set the length of den
-	cout << "What is the Den's width?\t"; //ask user for input about den
+	three.setBase(number); //set the length of triangle three
+	cout << "What is the Den's width?\t"; //ask user for input about triangle three
 	cin >> number;
-	den.setWidth(number); //set the width of den
+	three.setHeight(number); //set the width of triangle three
 	
-	totalArea = kitchen.getArea() + bedroom.getArea() + den.getArea(); //get individual areas of each and add
+	totalArea = one.getArea() + two.getArea() + three.getArea(); //get individual areas of each and add
 	
 	cout << "The total area of the three rooms is " << totalArea << endl; //output total area to user
 	
