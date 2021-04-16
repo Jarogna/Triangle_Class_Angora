@@ -51,30 +51,36 @@ int main()
 	Triangle two;
 	Triangle three;
 	
-	cout << "What is the Triangle one's base?\t"; //ask user for input about triangle one
+	cout << "What is Triangle one's base?\t"; //ask user for input about triangle one
 	cin >> number;
-	one.setBase(number); //set the length of triangle one
-	cout << "What is the Triangle one's height?\t"; //ask user for input about triangle one
+	one.setBase(number); //set the base of triangle one
+	cout << "What is Triangle one's height?\t"; //ask user for input about triangle one
 	cin >> number;
-	one.setHeight(number); //set the width of triangle one
+	one.setHeight(number); //set the height of triangle one
+  //Display user inputs for the triangle and calculate the area
+  cout << "Triangle One's base is: " << one.getBase() << "\nTriangle One's height is: " << one.getHeight() << "\nTriangle One's area is: " << one.getArea() << endl;
 	
-	cout << "What is the Triangle two's length?\t"; //ask user for input about triangle two
+	cout << "What is Triangle two's base?\t"; //ask user for input about triangle two
 	cin >> number;
-	two.setBase(number); //set the length of triangle two
-	cout << "What is the Triangle two's width?\t"; //ask user for input about triangle two
+	two.setBase(number); //set the base of triangle two
+	cout << "What is Triangle two's height?\t"; //ask user for input about triangle two
 	cin >> number;
-	two.setHeight(number); //set the width of triangle two
+	two.setHeight(number); //set the height of triangle two
+  //Display user inputs for the triangle and calculate the area
+  cout << "Triangle Two's base is: " << two.getBase() << "\nTriangle Two's height is: " << two.getHeight() << "\nTriangle Two's area is: " << two.getArea() << endl;
 	
-	cout << "What is the Den's length?\t"; //ask user for input about triangle three
+	cout << "What is Triangle three's base?\t"; //ask user for input about triangle three
 	cin >> number;
-	three.setBase(number); //set the length of triangle three
-	cout << "What is the Den's width?\t"; //ask user for input about triangle three
+	three.setBase(number); //set the base of triangle three
+	cout << "What is Triangle three's height?\t"; //ask user for input about triangle three
 	cin >> number;
-	three.setHeight(number); //set the width of triangle three
+	three.setHeight(number); //set the height of triangle three
+  //Display user inputs for the triangle and calculate the area 
+  cout << "Triangle Three's base is: " << three.getBase() << "\nTriangle Three's height is: " << three.getHeight() << "\nTriangle Three's area is: " << three.getArea() << endl;
 	
 	totalArea = one.getArea() + two.getArea() + three.getArea(); //get individual areas of each and add
 	
-	cout << "The total area of the three rooms is " << totalArea << endl; //output total area to user
+	cout << "The total area of the three triangles is " << totalArea << endl; //output total area to user
 	
 	return 0; //done
 }
